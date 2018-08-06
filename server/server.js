@@ -25,12 +25,7 @@ app.post('/sendNotification', (req, res) => {
     notification: {
       title: 'New Notification',
       body: 'This is the body of the notification',
-      icon: 'assets/icons/icon-512x512.png',
-      vibrate: [100, 100],
-      data: {
-        dateOfArrival: Date.now(),
-        primaryKey: 1
-      }
+      icon: 'assets/icons/icon-512x512.png'
     }
   };
 

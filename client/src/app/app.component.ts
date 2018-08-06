@@ -12,7 +12,7 @@ const VAPID_PUBLIC = 'BNOJyTgwrEwK9lbetRcougxkRgLpPs1DX0YCfA5ZzXu4z9p_Et5EnvMja7
 export class AppComponent {
   title = 'angular-push-notifications';
 
-  constructor(private swPush: SwPush, private pushService: PushNotificationService, private swUpdate: SwUpdate) {
+  constructor(swPush: SwPush, pushService: PushNotificationService) {
     console.log(swPush.isEnabled);
     if (swPush.isEnabled) {
       swPush

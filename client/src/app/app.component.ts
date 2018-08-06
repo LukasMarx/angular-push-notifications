@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SwPush, SwUpdate } from '@angular/service-worker';
+import { SwPush } from '@angular/service-worker';
 import { PushNotificationService } from './pushNotification.service';
 
 const VAPID_PUBLIC = 'BNOJyTgwrEwK9lbetRcougxkRgLpPs1DX0YCfA5ZzXu4z9p_Et5EnvMja7MGfCqyFCY4FnFnJVICM4bMUcnrxWg';
@@ -13,7 +13,6 @@ export class AppComponent {
   title = 'angular-push-notifications';
 
   constructor(swPush: SwPush, pushService: PushNotificationService) {
-    console.log(swPush.isEnabled);
     if (swPush.isEnabled) {
       swPush
         .requestSubscription({
